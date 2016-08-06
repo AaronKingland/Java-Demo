@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="AliPayMethod" extends="json-default" namespace="/">
+		<action name="AliPayMethod" class="com.alipay.action.ALIPayAction"
+			method="aliPayMethod">
+			<result name="success" type="json"></result>
+			<result name="fail" type="json"></result>
+		</action>
+		<action name="AliBackAsny" class="com.alipay.action.ALIPayAction"
+			method="aliBackAsny">
+			<result name="success">/paysuccess.jsp</result>
+			<result name="fail" type="json"></result>
+		</action>
+		<action name="AliBackSame" class="com.alipay.action.ALIPayAction"
+			method="aliBackSame">
+			<result name="success">/paysuccess.jsp</result>
+			<result name="fail" type="json"></result>
+		</action>
+	</package>
+</struts>    
